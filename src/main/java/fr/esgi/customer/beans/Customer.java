@@ -6,7 +6,8 @@ public record Customer(int referenceId,
                        String companyName,
                        String town,
                        String address,
-                       String siret) {
+                       String siret
+) {
 
     public static Customer create(CSVRecord csvRecord, String[] headers) {
         return new Customer(

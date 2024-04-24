@@ -3,4 +3,34 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
+    <error-page>
+        <exception-type>fr.esgi.customer.exception.CustomersResourceNotFoundException</exception-type>
+        <location>/error</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>fr.esgi.customer.exception.MalFormattedCustomersResourceUriException</exception-type>
+        <location>/error</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>fr.esgi.customer.exception.CustomersParsingException</exception-type>
+        <location>/error</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>fr.esgi.customer.exception.MissingCustomerId</exception-type>
+        <location>/invalid-parameter</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.NumberFormatException</exception-type>
+        <location>/invalid-parameter</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>fr.esgi.customer.exception.NotFoundCustomerException</exception-type>
+        <location>/not-found</location>
+    </error-page>
+
 </web-app>
